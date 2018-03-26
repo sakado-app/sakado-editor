@@ -2,6 +2,7 @@ package fr.litarvan.sakado.editor.gui;
 
 import java.awt.Color;
 import java.awt.Dimension;
+import java.awt.FlowLayout;
 import java.awt.Font;
 import java.awt.Graphics;
 
@@ -24,6 +25,10 @@ public class SakadoToolbar extends JPanel
     public SakadoToolbar(SakadoTextEditor editor)
     {
         this.editor = editor;
+
+        FlowLayout layout = new FlowLayout();
+        layout.setAlignment(FlowLayout.LEFT);
+        this.setLayout(layout);
 
         this.setBackground(Color.WHITE);
         this.setBorder(BorderFactory.createMatteBorder(0, 0, 1, 0, Color.LIGHT_GRAY));
